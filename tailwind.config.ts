@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom color palette from the reference images
+				'deep-purple': '#604652',
+				'warm-purple': '#735557',
+				'neutral-warm': '#97866A',
+				'soft-peach': '#D29F80',
+				'bright-cyan': '#00D4FF',
+				'electric-purple': '#6366F1',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +92,52 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'text-reveal': {
+					'0%': {
+						color: '#604652',
+						transform: 'translateY(10px)',
+						opacity: '0.7'
+					},
+					'100%': {
+						color: '#ffffff',
+						transform: 'translateY(0)',
+						opacity: '1'
+					}
+				},
+				'gradient-shift': {
+					'0%': {
+						backgroundPosition: '0% 50%'
+					},
+					'50%': {
+						backgroundPosition: '100% 50%'
+					},
+					'100%': {
+						backgroundPosition: '0% 50%'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'text-reveal': 'text-reveal 0.8s ease-out',
+				'gradient-shift': 'gradient-shift 6s ease-in-out infinite',
+			},
+			backgroundImage: {
+				'main-gradient': 'linear-gradient(135deg, #000000 0%, #604652 30%, #735557 60%, #97866A 90%, #ffffff 100%)',
+				'purple-gradient': 'linear-gradient(135deg, #6366F1 0%, #604652 50%, #000000 100%)',
+				'text-gradient': 'linear-gradient(135deg, #00D4FF 0%, #6366F1 50%, #ffffff 100%)',
 			}
 		}
 	},
