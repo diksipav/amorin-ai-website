@@ -4,8 +4,15 @@ import ScrollRevealText from './ScrollRevealText';
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 relative">
-      <div className="max-w-6xl mx-auto">
+    <section className="min-h-screen flex items-center justify-center px-6 relative bg-main-gradient">
+      {/* Background geometric elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 border border-white/20 rounded-full"></div>
+        <div className="absolute top-1/2 right-1/4 w-32 h-32 border border-white/20 rounded-full"></div>
+        <div className="absolute bottom-1/4 left-1/2 w-48 h-48 border border-white/20 rounded-full"></div>
+      </div>
+      
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-8 opacity-60">
           <span className="text-sm tracking-[0.2em] uppercase text-neutral-warm">
             [SERVICE]

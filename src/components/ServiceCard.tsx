@@ -12,14 +12,14 @@ interface ServiceCardProps {
 const ServiceCard: React.FC<ServiceCardProps> = ({ number, title, description, delay = 0 }) => {
   return (
     <ScrollRevealText delay={delay} className="group">
-      <div className="p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-500 hover:scale-105">
-        <div className="text-sm text-neutral-warm mb-4 tracking-wider">
+      <div className="p-8 rounded-2xl border border-gray-200 bg-white hover:bg-gray-50 transition-all duration-500 hover:scale-105 shadow-sm hover:shadow-md">
+        <div className="text-sm text-gray-600 mb-4 tracking-wider">
           {number}
         </div>
-        <h3 className="text-3xl md:text-4xl font-light mb-6 group-hover:text-bright-cyan transition-colors duration-300">
+        <h3 className="text-3xl md:text-4xl font-light mb-6 text-deep-purple group-hover:text-electric-purple transition-colors duration-300">
           {title}
         </h3>
-        <p className="text-lg leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+        <p className="text-lg leading-relaxed text-gray-700 group-hover:text-gray-800 transition-colors duration-300">
           {description}
         </p>
       </div>

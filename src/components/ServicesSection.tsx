@@ -23,16 +23,16 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-32 px-6" id="works">
+    <section className="py-32 px-6 bg-white" id="works">
       <div className="max-w-7xl mx-auto">
         <ScrollRevealText className="text-center mb-20">
-          <div className="text-sm tracking-[0.2em] uppercase text-neutral-warm mb-8">
+          <div className="text-sm tracking-[0.2em] uppercase text-gray-600 mb-8">
             [OUR SERVICES]
           </div>
-          <h2 className="text-5xl md:text-7xl font-light leading-tight">
+          <h2 className="text-5xl md:text-7xl font-light leading-tight text-deep-purple">
             Transforming Business with
             <br />
-            <span className="gradient-text font-normal italic">Intelligent Solutions</span>
+            <span className="text-electric-purple font-normal italic">Intelligent Solutions</span>
           </h2>
         </ScrollRevealText>
 
