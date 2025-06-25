@@ -11,6 +11,7 @@ const Index = () => {
 
       <main className="relative z-10">
         <HeroSection />
+        {/* <ServicesSection /> */}
       </main>
 
       {/* <footer className="py-12 px-6 border-t border-gray-200 bg-white">

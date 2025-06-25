@@ -160,11 +160,21 @@
   }
 
   h1 {
-    @apply text-7xl tracking-wide;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-wide text-white;
   }
 
   p {
     @apply tracking-wide text-white;
+  }
+
+  .bg-dot-grid {
+    /* background-color: #1d0e1e; */
+    background-image: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.2) 1px,
+      transparent 1px
+    );
+    background-size: 16px 16px;
   }
 }
 
