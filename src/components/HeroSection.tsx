@@ -13,7 +13,7 @@ const HeroSection = () => {
     >
       <WaveDots />
       <div className="absolute inset-0 bg-black opacity-40 z-10 pointer-events-none" />
-      <div className="max-w-screen sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-7xl 3xl:max-w-[1440px] relative z-20 pt-10 md:pt-24 3xl:mx-auto">
+      <div className="max-w-screen sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-7xl 3xl:max-w-[1440px] relative z-20 pt-8 md:pt-24 3xl:mx-auto">
         <ScrollRevealText className="text-5xl md:text-7xl lg:text-8xl font-light leading-tight text-center mb-4">
           <h1 className="text-left">
             We help <span className="font-medium italic">small</span> and{" "}
