@@ -14,9 +14,9 @@ const HeroSection = () => {
     >
       <WaveDots />
       <div className="absolute inset-0 bg-black opacity-20 pointer-events-none z-20" />
-      <div className="max-w-screen 2xl:max-w-[1500px] relative z-20 2xl:mx-auto md:grid md:[grid-template-columns:1fr_70%] lg:[grid-template-columns:1fr_900px] gap-x-12">
-        <div className="self-center z-10 md:-mr-80 md:pb-10 lg:-mr-48">
-          <ScrollRevealText className="text-5xl md:text-7xl lg:text-8xl font-light leading-tight text-center mb-4">
+      <div className="max-w-screen 2xl:max-w-[1500px] relative z-20 2xl:mx-auto md:grid md:[grid-template-columns:1fr_65%] lg:[grid-template-columns:1fr_60%] xl:[grid-template-columns:1fr_60%] gap-x-12">
+        <div className="self-center z-10 md:-mr-80 md:pb-20 lg:pb-32 2xl:max-w-[780px]">
+          <ScrollRevealText className="text-5xl md:text-7xl xl:text-8xl font-light leading-tight text-center mb-4">
             <h1 className="text-left">
               We help{" "}
               <span
@@ -67,7 +67,7 @@ const HeroSection = () => {
           </ScrollRevealText>
 
           <ScrollRevealText className="text-lg md:text-xl max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl 3xl:max-w-5xl leading-relaxed">
-            <p className="mb-4 text-left opacity-80 md:max-w-[380px]">
+            <p className="mb-4 text-left opacity-80 md:max-w-[400px] lg:max-w-lg">
               Including smart chatbots, voice agents, internal assistants, and
               AI-powered workflow automations that transform how your business
               operates.
