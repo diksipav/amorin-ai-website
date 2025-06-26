@@ -11,7 +11,7 @@
 
     <!-- Gradient for main fill -->
     <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#71187a"/>
+      <stop offset="0%" stop-color="#9e21ab"/>
       <stop offset="100%" stop-color="#430e48"/>
     </linearGradient>
   </defs>

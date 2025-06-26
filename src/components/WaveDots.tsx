@@ -35,7 +35,7 @@ const WaveDots = () => {
       const cx = i * spacingX;
       const cy = verticalCenter + baseY + (j - rows / 2) * spacingY * 0.7;
       // Fade out dots further from the center
-      const opacity = 0.9 - Math.abs(j - rows / 2) * 0.05;
+      const opacity = 1 - Math.abs(j - rows / 2) * 0.05;
       circles.push(
         <circle
           key={`${i}-${j}`}
