@@ -8,7 +8,6 @@ const HeroSection = () => {
       style={{
         background:
           "radial-gradient(ellipse at bottom, #430e48 0%, #1f0c20 100%)",
-        // background: "#340b38",
         overflow: "hidden",
       }}
     >

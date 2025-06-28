@@ -26,7 +26,8 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        dark: colors.gray[700],
+        themeLight: "#430e48",
+        themeDark: "#1f0c20",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -135,14 +136,6 @@ export default {
         "fade-in": "fade-in 0.6s ease-out",
         "text-reveal": "text-reveal 0.8s ease-out",
         "gradient-shift": "gradient-shift 6s ease-in-out infinite",
-      },
-      backgroundImage: {
-        "main-gradient":
-          "linear-gradient(225deg, #080607 0%, #34262c 30%, #604652 60%, #7d5c6b 80%, #a48192 100%)",
-        "purple-gradient":
-          "linear-gradient(135deg, #6366F1 0%, #604652 50%, #000000 100%)",
-        "text-gradient":
-          "linear-gradient(135deg, #00D4FF 0%, #6366F1 50%, #ffffff 100%)",
       },
       screens: {
         "3xl": "1920px",

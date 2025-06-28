@@ -28,7 +28,7 @@ const ServicesSection = () => {
     <section className="py-32 px-6 bg-white" id="works">
       <div className="max-w-7xl mx-auto">
         <ScrollRevealText className="text-center mb-20">
-          <p className="text-base tracking-[0.2em] text-dark mb-8">
+          <p className="text-base tracking-[0.2em] text-gray700 mb-8">
             [OUR SERVICES]
           </p>
         </ScrollRevealText>
