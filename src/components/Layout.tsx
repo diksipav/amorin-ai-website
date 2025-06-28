@@ -15,7 +15,6 @@ const Layout = ({ children }: LayoutProps) => {
         overflow: "hidden",
       }}
     >
-      <Navigation />
       {children}
     </div>
   );
