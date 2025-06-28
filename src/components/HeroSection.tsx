@@ -3,14 +3,7 @@ import WaveDots from "./WaveDots";
 
 const HeroSection = () => {
   return (
-    <section
-      className="min-h-screen flex items-center px-5 md:px-10 lg:px-16 xl:px-28 relative overflow-hidden z-30"
-      style={{
-        background:
-          "radial-gradient(ellipse at bottom, #430e48 0%, #1f0c20 100%)",
-        overflow: "hidden",
-      }}
-    >
+    <section className="min-h-screen flex items-center px-5 md:px-10 lg:px-16 xl:px-28 relative overflow-hidden z-30 pt-[42px]">
       <WaveDots />
       <div className="absolute inset-0 bg-black opacity-20 pointer-events-none z-20" />
       <div className="max-w-screen 2xl:max-w-[1500px] relative z-20 2xl:mx-auto md:grid md:[grid-template-columns:1fr_65%] lg:[grid-template-columns:1fr_60%] xl:[grid-template-columns:1fr_60%] gap-x-12">
@@ -81,7 +74,7 @@ const HeroSection = () => {
         </div>
         <div className="relative z-0 md:-mr-7 lg:-mr-12 md:self-end">
           <img
-            src="/bggg.png"
+            src="/hero.png"
             alt=""
             className="w-full h-auto cover hidden md:block"
             style={{

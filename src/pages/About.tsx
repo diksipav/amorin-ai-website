@@ -1,8 +1,6 @@
-
-import BusinessCard from "@/components/BusinessCard";
-
 const About = () => {
   return (
+<<<<<<< Updated upstream
     <main className="min-h-screen bg-white">
       {/* <div className="container mx-auto px-6 py-32">
         <div className="max-w-4xl mx-auto">
@@ -12,6 +10,10 @@ const About = () => {
           </div>
         </div>
       </div> */}
+=======
+    <main className="min-h-screen pt-[42px]">
+      <div className="container mx-auto px-6"></div>
+>>>>>>> Stashed changes
     </main>
   );
 };
