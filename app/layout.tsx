@@ -41,7 +41,7 @@ export default function RootLayout({
         className="min-h-screen flex flex-col"
         style={{
           background:
-            "radial-gradient(ellipse at bottom, #430e48 0%, #1f0c20 100%)",
+            "radial-gradient(ellipse at bottom, #340b38 0%, #1f0c20 100%)",
         }}
       >
         <Navigation />

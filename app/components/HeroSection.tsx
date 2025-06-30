@@ -7,9 +7,9 @@ import WaveDots from "./WaveDots";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center px-5 md:px-10 lg:px-16 xl:px-28 relative z-30">
+    <section className="min-h-[calc(100vh_-_90px)] flex items-center px-5 md:px-10 lg:px-16 xl:px-28 relative z-30">
       <WaveDots />
-      <div className="absolute inset-0 bg-black opacity-20 pointer-events-none z-20" />
+      {/* <div className="absolute inset-0 bg-black opacity-20 pointer-events-none z-20" /> */}
       <div className="max-w-screen 2xl:max-w-[1500px] relative z-20 2xl:mx-auto md:grid md:[grid-template-columns:1fr_65%] lg:[grid-template-columns:1fr_60%] xl:[grid-template-columns:1fr_60%] gap-x-12">
         <div className="self-center z-10 md:-mr-80 md:pb-20 lg:pb-32 2xl:max-w-[780px]">
           <ScrollRevealText className="text-5xl md:text-7xl xl:text-8xl font-light leading-tight text-center mb-4">

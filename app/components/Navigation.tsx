@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Navigation = () => {
   return (
-    <nav className="h-[90px] fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-6">
+    <nav className="h-[90px] z-50 flex items-center justify-between p-6">
       <Link
         href="/"
         className="flex gap-3 text-text text-2xl font-light tracking-wide"

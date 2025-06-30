@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <main className="pt-[42px]">
+    <main>
       <div className="container mx-auto px-6"></div>
     </main>
   );

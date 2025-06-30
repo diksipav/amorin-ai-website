@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 
 const rows = 50;
@@ -11,6 +13,12 @@ const phaseShift = Math.PI / 4;
 const color = "#8f1e9a"; // light purple
 
 const WaveDots = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const [width, setWidth] = useState(
     typeof window !== "undefined" ? window.innerWidth : 1200
   );
@@ -24,6 +32,8 @@ const WaveDots = () => {
   const cols = Math.ceil(width / spacingX) + 2;
   const circles = [];
 
+  if (!mounted) return null;
+
   for (let i = 0; i < cols; i++) {
     // Multiple overlapping sine waves for complexity
     const baseY =
@@ -35,7 +45,7 @@ const WaveDots = () => {
       const cx = i * spacingX;
       const cy = verticalCenter + baseY + (j - rows / 2) * spacingY * 0.7;
       // Fade out dots further from the center
-      const opacity = 1 - Math.abs(j - rows / 2) * 0.05;
+      const opacity = 0.7 - Math.abs(j - rows / 2) * 0.05;
       circles.push(
         <circle
           key={`${i}-${j}`}
