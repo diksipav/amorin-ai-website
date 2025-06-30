@@ -1,6 +1,5 @@
 import React from "react";
 import ScrollRevealText from "./ScrollRevealText";
-import { Button } from "@/components/ui/button";
 
 const AutomationSection = () => {
   return (
@@ -26,7 +25,7 @@ const AutomationSection = () => {
           operates.
         </ScrollRevealText>
 
-        <ScrollRevealText
+        {/* <ScrollRevealText
           delay={600}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
@@ -43,7 +42,7 @@ const AutomationSection = () => {
           >
             View Our Work
           </Button>
-        </ScrollRevealText>
+        </ScrollRevealText> */}
       </div>
     </section>
   );
