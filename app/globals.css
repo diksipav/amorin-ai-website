@@ -105,17 +105,17 @@
     cursor: pointer;
   }
 
-  /* .scroll-text {
-    transition: color 0.8s ease-out, transform 0.8s ease-out;
+  .scroll-text {
+    transition:
+      color 0.8s ease-out,
+      transform 0.8s ease-out;
   }
 
   .scroll-text.revealed {
-    @apply text-white;
     transform: translateY(0);
   }
 
   .scroll-text:not(.revealed) {
-    @apply text-deep-purple; 
     transform: translateY(10px);
-  } */
+  }
 }
