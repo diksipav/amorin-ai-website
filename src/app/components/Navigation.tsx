@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useState } from "react";
-// import { useTranslations } from "next-intl";
+import { useRouter, usePathname } from "next/navigation";
 
 const LANGUAGES = [
   { code: "en", label: "English" },
@@ -11,22 +11,25 @@ const LANGUAGES = [
 ];
 
 const Navigation = () => {
-  // const t = useTranslations("nav");
-
   const [open, setOpen] = useState(false);
-  const [lang, setLang] = useState("en");
+  const [locale, setLocale] = useState("en");
+
+  const router = useRouter();
+  const pathname = usePathname();
 
   const handleSelect = (code: string) => {
-    setLang(code);
+    setLocale(code);
     setOpen(false);
-    // For real i18n: update route or context here
+
+    const pathWithoutLocale = pathname.replace(/^\/(en|es|sr)/, "");
+    router.push(`/${code}${pathWithoutLocale === "" ? "" : pathWithoutLocale}`);
   };
 
   return (
-    <nav className="h-[90px] z-50 flex items-center justify-between p-6">
+    <nav className="w-full h-[90px] z-50 flex items-center justify-between p-5 sm:px-6 md:px-10 max-w-[1616px]">
       <Link
         href="/"
-        className="flex gap-3 text-text text-2xl font-light tracking-wide"
+        className="flex gap-2 sm:gap-3 text-text text-2xl font-light tracking-wide"
       >
         <img src="/logo.svg" alt="amorin.ai logo" width={46} />
         <span className="pt-1">amorin.ai</span>
@@ -40,7 +43,7 @@ const Navigation = () => {
             aria-expanded={open}
           >
             <span className="w-[62px] text-start">
-              {LANGUAGES.find((l) => l.code === lang)?.label}
+              {LANGUAGES.find((l) => l.code === locale)?.label}
             </span>
             <svg width="16" height="16" fill="none" viewBox="0 0 20 20">
               <path
@@ -59,7 +62,7 @@ const Navigation = () => {
                     className="w-full text-left px-4 py-2 hover:bg-themeLight/10 rounded-x text-textDark"
                     onClick={() => handleSelect(l.code)}
                     role="option"
-                    aria-selected={lang === l.code}
+                    aria-selected={locale === l.code}
                   >
                     {l.label}
                   </button>

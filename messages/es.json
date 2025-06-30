@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "blog": "blog",
+    "language": {
+      "english": "English",
+      "spanish": "Español",
+      "serbian": "Srpski"
+    }
+  },
+  "home": {
+    "title": {
+      "1": "Ayudamos a",
+      "2": "pequeñas",
+      "3": "y",
+      "4": "medianas empresas",
+      "5": "a ahorrar tiempo, reducir costos y mejorar la eficiencia mediante",
+      "6": "soluciones de IA personalizadas."
+    },
+    "subtitle": "Incluye chatbots inteligentes, agentes de voz, asistentes internos y automatización de flujos de trabajo impulsados por IA que transforman la manera en que opera tu negocio.",
+    "main-cta": "HABLA CON NOSOTROS"
+  },
+  "contact-form": {
+    "title": "Cuéntanos cómo podemos ayudarte.",
+    "subtitle": "Estamos abiertos a escuchar tus desafíos y explorar cómo la automatización puede mejorar tu negocio. Envíanos un mensaje y organizaremos una llamada gratuita.",
+    "name": "Tu nombre",
+    "email": "Tu correo electrónico",
+    "msg": "Cuéntanos tus necesidades",
+    "cta": "Enviar",
+    "cta-sending": "Enviando..."
+  }
+}

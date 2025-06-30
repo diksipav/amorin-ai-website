@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "blog": "blog",
+    "language": {
+      "english": "English",
+      "spanish": "Español",
+      "serbian": "Srpski"
+    }
+  },
+  "home": {
+    "title": {
+      "1": "Pomažemo",
+      "2": "malim",
+      "3": "i",
+      "4": "srednjim preduzećima",
+      "5": "da uštede vreme, smanje troškove i poboljšaju efikasnost uz pomoċ",
+      "6": "prilagođenih AI rešenja."
+    },
+    "subtitle": "Uključujući pametne četbotove, glasovne agente, interne asistente i veliki broj automatizacija zasnovanih na veštačkoj inteligenciji.",
+    "main-cta": "KONTAKTIRAJTE NAS"
+  },
+  "contact-form": {
+    "title": "Recite nam kako možemo da vam pomognemo.",
+    "subtitle": "Otvoreni smo da čujemo vaše izazove i da zajedno istražimo kako automatizacija može unaprediti vaše poslovanje. Pošaljite nam poruku i organizovaćemo besplatan poziv.",
+    "name": "Vaše ime",
+    "email": "Vaš email",
+    "msg": "Opišite nam svoje potrebe",
+    "cta": "Pošalji",
+    "cta-sending": "Šalje se..."
+  }
+}

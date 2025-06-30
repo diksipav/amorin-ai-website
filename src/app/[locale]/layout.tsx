@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import Navigation from "./components/Navigation";
-import Footer from "./components/Footer";
-import "./globals.css";
-import { NextIntlClientProvider } from "next-intl";
+import Navigation from "@/app/components/Navigation";
+import Footer from "@/app/components/Footer";
+import { notFound } from "next/navigation";
+import "../globals.css";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { routing } from "@/i18n/routing";
 
 export const metadata: Metadata = {
   title: "Amorin AI",
@@ -31,27 +33,34 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+  console.log("DIDI", locale);
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body
-        className="min-h-screen flex flex-col"
+        className="min-h-screen flex flex-col items-center"
         style={{
           background:
             "radial-gradient(ellipse at bottom, #340b38 0%, #1f0c20 100%)",
         }}
       >
-        {/* <NextIntlClientProvider> */}
-        <Navigation />
-        <div id="root" className="flex-grow">
-          {children}
-        </div>
-        <Footer />
-        {/* </NextIntlClientProvider> */}
+        <NextIntlClientProvider>
+          <Navigation />
+          <div id="root" className="flex-grow">
+            {children}
+          </div>
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

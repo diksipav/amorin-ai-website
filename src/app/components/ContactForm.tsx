@@ -1,8 +1,11 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 
 const ContactForm = () => {
+  const t = useTranslations("contact-form");
+
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [name, setName] = useState("");
@@ -56,18 +59,14 @@ const ContactForm = () => {
         </div>
       ) : (
         <form ref={formRef} onSubmit={handleSubmit}>
-          <h2 className="text-textDark">Let us know how we can help.</h2>
-          <p className="mb-8 text-textDark hidden xs:block">
-            We're open to hearing about your challenges and exploring how
-            automation can help your business. Send us a message and we'll
-            organise a free call.
-          </p>
+          <h2 className="text-textDark">{t("title")}</h2>
+          <p className="mb-8 text-textDark hidden xs:block">{t("subtitle")}</p>
           <div className="mb-4">
             <label
               htmlFor="email"
               className="block font-medium text-textDark mb-1"
             >
-              Your name <span className="text-themeLight">*</span>
+              {t("name")} <span className="text-themeLight">*</span>
             </label>
             <input
               ref={emailRef}
@@ -84,7 +83,7 @@ const ContactForm = () => {
               htmlFor="email"
               className="block font-medium text-textDark mb-1"
             >
-              Your email <span className="text-themeLight">*</span>
+              {t("email")} <span className="text-themeLight">*</span>
             </label>
             <input
               ref={emailRef}
@@ -103,8 +102,7 @@ const ContactForm = () => {
               htmlFor="msg"
               className="block font-medium text-textDark mb-1"
             >
-              Tell us about your needs{" "}
-              <span className="text-themeLight">*</span>
+              {t("msg")} <span className="text-themeLight">*</span>
             </label>
             <textarea
               id="msg"
@@ -129,7 +127,7 @@ const ContactForm = () => {
             className="bg-themeLight w-[120px] text-text font-semibold px-7 py-3 rounded-full hover:bg-theme focus:outline-none focus:ring-2 focus:ring-themeLight focus:ring-offset-2 transition-colors duration-300"
             disabled={loading}
           >
-            {loading ? "Sending..." : "Send"}
+            {loading ? t("cta-sending") : t("cta")}
           </button>
         </form>
       )}

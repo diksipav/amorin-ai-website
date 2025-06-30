@@ -1,19 +1,22 @@
 "use client";
 
 // import Image from "next/image"; use Image for img
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import WaveDots from "./WaveDots";
 
 const HeroSection = () => {
+  const t = useTranslations("home");
+
   return (
-    <section className="min-h-[calc(100vh_-_90px)] flex items-center px-5 md:px-10 lg:px-16 xl:px-28 relative z-30 pb-8 md:pb-0">
+    <section className="min-h-[calc(100vh_-_90px)] flex items-center px-5 sm:px-6 md:px-10 relative z-30 pb-8 md:pb-0 max-w-[1616px]">
       <WaveDots />
       {/* <div className="absolute inset-0 bg-black opacity-20 pointer-events-none z-20" /> */}
-      <div className="max-w-screen 2xl:max-w-[1500px] relative z-20 2xl:mx-auto md:grid md:[grid-template-columns:1fr_65%] lg:[grid-template-columns:1fr_60%] xl:[grid-template-columns:1fr_60%] gap-x-12">
+      <div className="max-w-screen relative z-20 2xl:mx-auto md:grid md:[grid-template-columns:1fr_65%] lg:[grid-template-columns:1fr_60%] xl:[grid-template-columns:1fr_60%] gap-x-12">
         <div className="self-center z-10 md:-mr-80 md:pb-20 lg:pb-32 2xl:max-w-[780px]">
           <div className="text-5xl md:text-7xl xl:text-8xl font-light leading-tight text-center mb-4">
             <h1 className="text-left">
-              We help{" "}
+              {t("title.1")}{" "}
               <span
                 className="font-medium bg-gradient-to-r"
                 style={{
@@ -26,9 +29,9 @@ const HeroSection = () => {
                   display: "inline",
                 }}
               >
-                small
+                {t("title.2")}
               </span>{" "}
-              and{" "}
+              {t("title.3")}{" "}
               <span
                 className="font-medium bg-gradient-to-r"
                 style={{
@@ -41,9 +44,9 @@ const HeroSection = () => {
                   display: "inline",
                 }}
               >
-                medium businesses
+                {t("title.4")}
               </span>{" "}
-              save time, reduce costs, and improve efficiency with{" "}
+              {t("title.5")}{" "}
               <span
                 className="font-medium bg-gradient-to-r"
                 style={{
@@ -56,23 +59,21 @@ const HeroSection = () => {
                   display: "inline",
                 }}
               >
-                custom AI solutions.
+                {t("title.6")}
               </span>
             </h1>
           </div>
 
           <div className="text-lg md:text-xl max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl 3xl:max-w-5xl leading-relaxed">
             <p className="mb-4 text-left opacity-80 md:max-w-[400px] lg:max-w-lg">
-              Including smart chatbots, voice agents, internal assistants, and
-              AI-powered workflow automations that transform how your business
-              operates.
+              {t("subtitle")}
             </p>
 
             <Link
               href="/contact-us"
               className="mt-3 px-7 py-3 border-2 text-text border-text font-medium rounded-full hover:bg-text hover:text-[#1f0c20] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-text/50 shadow-lg shadow-text/20 hover:shadow-text/30 transition-all duration-300 inline-block text-center"
             >
-              TALK TO US
+              {t("main-cta")}
             </Link>
           </div>
         </div>
