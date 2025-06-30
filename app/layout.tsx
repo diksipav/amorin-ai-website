@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import "./globals.css";
+import { NextIntlClientProvider } from "next-intl";
 
 export const metadata: Metadata = {
   title: "Amorin AI",
@@ -44,11 +45,13 @@ export default function RootLayout({
             "radial-gradient(ellipse at bottom, #340b38 0%, #1f0c20 100%)",
         }}
       >
+        {/* <NextIntlClientProvider> */}
         <Navigation />
         <div id="root" className="flex-grow">
           {children}
         </div>
         <Footer />
+        {/* </NextIntlClientProvider> */}
       </body>
     </html>
   );

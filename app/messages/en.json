@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "blog": "blog",
+    "language": {
+      "english": "English",
+      "spanish": "Español",
+      "serbian": "Srpski"
+    }
+  },
+  "home": {
+    "title": "We help small and medium businesses save time, reduce costs, and improve efficiency with custom AI solutions.",
+    "subtitle": "Including smart chatbots, voice agents, internal assistants, and AI-powered workflow automations that transform how your business operates.",
+    "main-cta": "TALK TO US"
+  },
+  "contact": {
+    "title": "Let us know how we can help.",
+    "subtitle": "We're open to hearing about your challenges and exploring how automation can help your business. Send us a message and we'll organise a free call.",
+    "name": "Your name",
+    "email": "Your email",
+    "msg": "Tell us about your needs"
+  }
+}
