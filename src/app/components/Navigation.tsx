@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@/i18n/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
 
 const LANGUAGES = [
@@ -12,17 +12,17 @@ const LANGUAGES = [
 
 const Navigation = () => {
   const [open, setOpen] = useState(false);
-  const [locale, setLocale] = useState("en");
 
   const router = useRouter();
   const pathname = usePathname();
 
-  const handleSelect = (code: string) => {
-    setLocale(code);
-    setOpen(false);
+  const localeMatch = pathname.match(/^\/(en|es|sr)/);
+  const locale = localeMatch ? localeMatch[1] : "en";
 
+  const handleSelect = (code: string) => {
     const pathWithoutLocale = pathname.replace(/^\/(en|es|sr)/, "");
     router.push(`/${code}${pathWithoutLocale === "" ? "" : pathWithoutLocale}`);
+    setOpen(false);
   };
 
   return (
@@ -35,10 +35,14 @@ const Navigation = () => {
         <span className="pt-1">amorin.ai</span>
       </Link>
       <div className="flex gap-3 md:gap-6 text-text font-light items-center">
-        <div className="relative">
+        <div
+          className="relative"
+          onMouseEnter={() => setOpen(true)}
+          onMouseLeave={() => setOpen(false)}
+        >
           <button
-            className="bg-transparent text-white border border-themeLight/40 pl-5 pr-4 py-2 rounded-full flex items-center gap-2 focus:outline-none hover:bg-theme/30 transition-colors duration-300"
-            onClick={() => setOpen((v) => !v)}
+            className={`text-white border border-themeLight/40 pl-5 pr-4 py-2 rounded-full flex items-center gap-2 focus:outline-none transition-colors duration-300
+              ${open ? "bg-theme/30" : "hover:bg-theme/30"}`}
             aria-haspopup="listbox"
             aria-expanded={open}
           >
@@ -55,20 +59,22 @@ const Navigation = () => {
             </svg>
           </button>
           {open && (
-            <ul className="absolute left-0 mt-2 bg-white rounded-xl shadow-lg py-2 min-w-[120px] z-50">
-              {LANGUAGES.map((l) => (
-                <li key={l.code}>
-                  <button
-                    className="w-full text-left px-4 py-2 hover:bg-themeLight/10 rounded-x text-textDark"
-                    onClick={() => handleSelect(l.code)}
-                    role="option"
-                    aria-selected={locale === l.code}
-                  >
-                    {l.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
+            <div className="absolute left-0 pt-2 z-50 min-w-[120px]">
+              <ul className="bg-white rounded-xl shadow-lg">
+                {LANGUAGES.map((l) => (
+                  <li key={l.code}>
+                    <button
+                      className={`w-full text-left px-4 py-2 rounded-x text-textDark hover:bg-themeLight/10 ${locale === l.code ? "bg-themeLight/20 hover:bg-themeLight/20" : ""}`}
+                      onClick={() => handleSelect(l.code)}
+                      role="option"
+                      aria-selected={locale === l.code}
+                    >
+                      {l.label}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
           )}
         </div>
         <Link
