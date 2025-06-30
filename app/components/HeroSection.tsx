@@ -2,7 +2,6 @@
 
 // import Image from "next/image"; use Image for img
 import Link from "next/link";
-import ScrollRevealText from "./ScrollRevealText";
 import WaveDots from "./WaveDots";
 
 const HeroSection = () => {
@@ -12,7 +11,7 @@ const HeroSection = () => {
       {/* <div className="absolute inset-0 bg-black opacity-20 pointer-events-none z-20" /> */}
       <div className="max-w-screen 2xl:max-w-[1500px] relative z-20 2xl:mx-auto md:grid md:[grid-template-columns:1fr_65%] lg:[grid-template-columns:1fr_60%] xl:[grid-template-columns:1fr_60%] gap-x-12">
         <div className="self-center z-10 md:-mr-80 md:pb-20 lg:pb-32 2xl:max-w-[780px]">
-          <ScrollRevealText className="text-5xl md:text-7xl xl:text-8xl font-light leading-tight text-center mb-4">
+          <div className="text-5xl md:text-7xl xl:text-8xl font-light leading-tight text-center mb-4">
             <h1 className="text-left">
               We help{" "}
               <span
@@ -60,9 +59,9 @@ const HeroSection = () => {
                 custom AI solutions.
               </span>
             </h1>
-          </ScrollRevealText>
+          </div>
 
-          <ScrollRevealText className="text-lg md:text-xl max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl 3xl:max-w-5xl leading-relaxed">
+          <div className="text-lg md:text-xl max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl 3xl:max-w-5xl leading-relaxed">
             <p className="mb-4 text-left opacity-80 md:max-w-[400px] lg:max-w-lg">
               Including smart chatbots, voice agents, internal assistants, and
               AI-powered workflow automations that transform how your business
@@ -75,7 +74,7 @@ const HeroSection = () => {
             >
               TALK TO US
             </Link>
-          </ScrollRevealText>
+          </div>
         </div>
         <div className="relative z-0 md:-mr-7 lg:-mr-12 md:self-end">
           <img
