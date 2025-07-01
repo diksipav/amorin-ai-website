@@ -27,6 +27,7 @@
     "msg": "Opišite nam svoje potrebe",
     "cta": "Pošalji",
     "cta-sending": "Šalje se...",
-    "successful-msg": "Hvala! Uskoro ćemo vam se javiti."
+    "successful-msg": "Hvala! Uskoro ćemo vam se javiti.",
+    "placeholder": "Šta vas najviše frustrira u vašem poslu? Koji taskovi vam oduzimaju više vremena nego što bi trebalo?"
   }
 }

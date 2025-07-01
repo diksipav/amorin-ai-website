@@ -19,6 +19,7 @@
     "msg": "Tell us about your needs",
     "cta": "Send",
     "cta-sending": "Sending...",
-    "successful-msg": "Thanks! You'll hear from us shortly."
+    "successful-msg": "Thanks! You'll hear from us shortly.",
+    "placeholder": "What currently frustrates you most in your business? What tasks take up more of your time than they should?"
   }
 }

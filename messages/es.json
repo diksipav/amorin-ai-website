@@ -27,6 +27,7 @@
     "msg": "Cuéntanos tus necesidades",
     "cta": "Enviar",
     "cta-sending": "Enviando...",
-    "successful-msg": "¡Gracias! Pronto nos comunicamos."
+    "successful-msg": "¡Gracias! Pronto nos comunicamos.",
+    "placeholder": "¿Qué es lo que más te frustra actualmente en tu negocio? ¿Qué tareas te toman más tiempo del que deberían?"
   }
 }
