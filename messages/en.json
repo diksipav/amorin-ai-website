@@ -18,6 +18,7 @@
     "email": "Your email",
     "msg": "Tell us about your needs",
     "cta": "Send",
-    "cta-sending": "Sending..."
+    "cta-sending": "Sending...",
+    "successful-msg": "Thanks! You'll hear from us shortly."
   }
 }

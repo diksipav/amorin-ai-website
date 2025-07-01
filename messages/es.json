@@ -26,6 +26,7 @@
     "email": "Tu correo electrónico",
     "msg": "Cuéntanos tus necesidades",
     "cta": "Enviar",
-    "cta-sending": "Enviando..."
+    "cta-sending": "Enviando...",
+    "successful-msg": "¡Gracias! Pronto nos comunicamos."
   }
 }

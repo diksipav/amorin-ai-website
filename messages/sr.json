@@ -26,6 +26,7 @@
     "email": "Vaš email",
     "msg": "Opišite nam svoje potrebe",
     "cta": "Pošalji",
-    "cta-sending": "Šalje se..."
+    "cta-sending": "Šalje se...",
+    "successful-msg": "Hvala! Uskoro ćemo vam se javiti."
   }
 }

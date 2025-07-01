@@ -56,7 +56,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="w-full max-w-[456px] mx-auto bg-white rounded-xl shadow-md p-5 sm:p-8 sm:pb-[34px] relative">
+    <div className="w-full max-w-[456px] mx-auto bg-white rounded-xl shadow-md p-5 sm:p-8 pb-[23px] sm:pb-[34px] relative">
       <form ref={formRef} onSubmit={handleSubmit}>
         <h2 className="text-textDark">{t("title")}</h2>
         <p className="mb-8 text-textDark hidden xs:block">{t("subtitle")}</p>
@@ -132,8 +132,8 @@ const ContactForm = () => {
           {loading ? t("cta-sending") : t("cta")}
         </button>
         {showSuccess && (
-          <p className="absolute bottom-1 pl-3 mt-4 text-textDark transition-opacity duration-500">
-            Thanks! You'll hear from us shortly.
+          <p className="absolute bottom-0 sm:bottom-1 pl-3 mt-4 text-textDark transition-opacity duration-500">
+            {t("successful-msg")}
           </p>
         )}
       </form>
