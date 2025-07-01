@@ -11,8 +11,12 @@ const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [msg, setMsg] = useState("");
+  const [showSuccess, setShowSuccess] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
+
+  const isFormValid =
+    name.trim() !== "" && email.trim() !== "" && msg.trim() !== "";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -36,8 +40,13 @@ const ContactForm = () => {
       if (!res.ok) throw new Error("Failed to send");
 
       const data = await res.json();
-      if (data.success) {
+      if (data.ok) {
         setSubmitted(true);
+        setName("");
+        setEmail("");
+        setMsg("");
+        setShowSuccess(true);
+        setTimeout(() => setShowSuccess(false), 4000); // 4 seconds
       }
     } catch (err) {
       console.error("Submission failed", err);
@@ -47,90 +56,87 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="w-full max-w-[456px] mx-auto bg-white rounded-xl shadow-md p-5 sm:p-8">
-      {submitted ? (
-        <div className="py-12 text-center">
-          <div className="text-2xl mb-2 font-semibold text-[#621469]">
-            Thanks!
-          </div>
-          <div className="text-lg text-textDark">
-            We'll be in touch within 24h.
-          </div>
-        </div>
-      ) : (
-        <form ref={formRef} onSubmit={handleSubmit}>
-          <h2 className="text-textDark">{t("title")}</h2>
-          <p className="mb-8 text-textDark hidden xs:block">{t("subtitle")}</p>
-          <div className="mb-4">
-            <label
-              htmlFor="email"
-              className="block font-medium text-textDark mb-1"
-            >
-              {t("name")} <span className="text-themeLight">*</span>
-            </label>
-            <input
-              ref={emailRef}
-              id="name"
-              name="name"
-              required
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-themeLight"
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="email"
-              className="block font-medium text-textDark mb-1"
-            >
-              {t("email")} <span className="text-themeLight">*</span>
-            </label>
-            <input
-              ref={emailRef}
-              id="email"
-              name="email"
-              type="email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-themeLight"
-              autoComplete="email"
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="msg"
-              className="block font-medium text-textDark mb-1"
-            >
-              {t("msg")} <span className="text-themeLight">*</span>
-            </label>
-            <textarea
-              id="msg"
-              name="msg"
-              required
-              rows={4}
-              value={msg}
-              onChange={(e) => setMsg(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-themeLight"
-            />
-          </div>
-          {/* Honeypot field */}
-          <input
-            type="text"
-            name="company"
-            className="hidden"
-            tabIndex={-1}
-            autoComplete="off"
-          />
-          <button
-            type="submit"
-            className="bg-themeLight w-[120px] text-text font-semibold px-7 py-3 rounded-full hover:bg-theme focus:outline-none focus:ring-2 focus:ring-themeLight focus:ring-offset-2 transition-colors duration-300"
-            disabled={loading}
+    <div className="w-full max-w-[456px] mx-auto bg-white rounded-xl shadow-md p-5 sm:p-8 sm:pb-[34px] relative">
+      <form ref={formRef} onSubmit={handleSubmit}>
+        <h2 className="text-textDark">{t("title")}</h2>
+        <p className="mb-8 text-textDark hidden xs:block">{t("subtitle")}</p>
+        <div className="mb-4">
+          <label
+            htmlFor="email"
+            className="block font-medium text-textDark mb-1"
           >
-            {loading ? t("cta-sending") : t("cta")}
-          </button>
-        </form>
-      )}
+            {t("name")} <span className="text-themeLight">*</span>
+          </label>
+          <input
+            ref={emailRef}
+            id="name"
+            name="name"
+            required
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-themeLight"
+          />
+        </div>
+        <div className="mb-4">
+          <label
+            htmlFor="email"
+            className="block font-medium text-textDark mb-1"
+          >
+            {t("email")} <span className="text-themeLight">*</span>
+          </label>
+          <input
+            ref={emailRef}
+            id="email"
+            name="email"
+            type="email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-themeLight"
+            autoComplete="email"
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="msg" className="block font-medium text-textDark mb-1">
+            {t("msg")} <span className="text-themeLight">*</span>
+          </label>
+          <textarea
+            id="msg"
+            name="msg"
+            required
+            rows={4}
+            value={msg}
+            onChange={(e) => setMsg(e.target.value)}
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-themeLight"
+          />
+        </div>
+        {/* Honeypot field */}
+        <input
+          type="text"
+          name="company"
+          className="hidden"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+        <button
+          type="submit"
+          className={`w-[120px] text-text font-semibold px-7 py-3 rounded-full focus:outline-none focus:ring-2 focus:ring-themeLight focus:ring-offset-2 transition-colors duration-300
+              ${
+                loading || !isFormValid
+                  ? "bg-themeLight/70 cursor-auto"
+                  : "bg-themeLight hover:bg-theme cursor-pointer"
+              }
+            `}
+          disabled={loading || !isFormValid}
+        >
+          {loading ? t("cta-sending") : t("cta")}
+        </button>
+        {showSuccess && (
+          <p className="absolute bottom-1 pl-3 mt-4 text-textDark transition-opacity duration-500">
+            Thanks! You'll hear from us shortly.
+          </p>
+        )}
+      </form>
     </div>
   );
 };
