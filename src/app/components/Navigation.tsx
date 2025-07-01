@@ -42,8 +42,8 @@ const Navigation = () => {
             onMouseLeave={() => setOpen(false)}
           >
             <button
-              className={`text-white border border-themeLight/40 pl-5 pr-4 py-2 rounded-full flex items-center gap-2 focus:outline-none transition-colors duration-300
-              ${open ? "bg-theme/30" : "hover:bg-theme/30"}`}
+              className={`text-white border border-themeLight/50 pl-5 pr-4 py-2 rounded-full flex items-center gap-2 focus:outline-none transition-colors duration-300 
+              ${open ? "bg-themeLight/20" : "hover:bg-themeLight/20"}`}
               aria-haspopup="listbox"
               aria-expanded={open}
             >

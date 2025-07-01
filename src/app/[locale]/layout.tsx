@@ -46,7 +46,7 @@ export default async function RootLayout({
   }
   return (
     <html lang={locale}>
-      <body className="min-h-screen flex flex-col items-center bg-[#2d112e]">
+      <body className="min-h-screen flex flex-col items-center bg-theme">
         <NextIntlClientProvider>
           <Navigation />
           <div id="root" className="flex-grow">

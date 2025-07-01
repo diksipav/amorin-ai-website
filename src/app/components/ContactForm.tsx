@@ -123,8 +123,8 @@ const ContactForm = () => {
           className={`w-[120px] text-text font-semibold px-7 py-3 rounded-full focus:outline-none focus:ring-2 focus:ring-themeLight focus:ring-offset-2 transition-colors duration-300
               ${
                 loading || !isFormValid
-                  ? "bg-themeLight/70 cursor-auto"
-                  : "bg-themeLight hover:bg-theme cursor-pointer"
+                  ? "bg-themeLight/80 cursor-auto"
+                  : "bg-themeLight hover:bg-[#652667] cursor-pointer"
               }
             `}
           disabled={loading || !isFormValid}
