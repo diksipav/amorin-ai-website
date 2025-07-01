@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react";
 
 const rows = 50;
-const spacingX = 18;
-const spacingY = 18;
+const spacingX = 20;
+const spacingY = 20;
 const dotRadius = 1.1; // smaller dots
-const verticalCenter = 240;
+const verticalCenter = 180;
 const amplitude = 60;
 const frequency = 0.045;
 const phaseShift = Math.PI / 4;
