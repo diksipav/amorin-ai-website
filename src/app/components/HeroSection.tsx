@@ -12,7 +12,7 @@ const HeroSection = () => {
     <section className="w-screen min-h-screen flex items-center px-5 sm:px-6 md:px-10 relative z-30 pb-8 md:pb-0">
       <WaveDots />
       {/* <div className="absolute inset-0 bg-black opacity-20 pointer-events-none z-20" /> */}
-      <div className="max-w-[1340px] relative z-20 2xl:mx-auto md:grid md:[grid-template-columns:1fr_60%] xl:[grid-template-columns:1fr_60%] gap-x-12">
+      <div className="max-w-[1340px] relative z-20 2xl:mx-auto md:grid md:[grid-template-columns:1fr_60%] xl:[grid-template-columns:1fr_60%] gap-x-12 lg:pt-16">
         <div className="self-center z-10 md:-mr-80 md:pb-20 lg:pb-32 2xl:max-w-[780px]">
           <div className="text-5xl md:text-7xl xl:text-8xl font-light leading-tight text-center mb-4">
             <h1 className="text-left">
