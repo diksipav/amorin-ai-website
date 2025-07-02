@@ -10,7 +10,7 @@ const verticalCenter = 180;
 const amplitude = 60;
 const frequency = 0.045;
 const phaseShift = Math.PI / 4;
-const color = "#8f1e9a"; // light purple
+const color = "#9a1e75";
 
 const WaveDots = () => {
   const [mounted, setMounted] = useState(false);

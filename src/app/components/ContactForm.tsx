@@ -74,7 +74,7 @@ const ContactForm = () => {
             required
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-themeLight"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-themeLight focus:border-transparent"
           />
         </div>
         <div className="mb-4">
@@ -92,7 +92,7 @@ const ContactForm = () => {
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-themeLight"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-themeLight focus:border-transparent"
             autoComplete="email"
           />
         </div>
@@ -108,7 +108,7 @@ const ContactForm = () => {
             value={msg}
             onChange={(e) => setMsg(e.target.value)}
             placeholder={t("placeholder")}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-themeLight"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-themeLight focus:border-transparent"
           />
         </div>
         {/* Honeypot field */}
@@ -125,7 +125,7 @@ const ContactForm = () => {
               ${
                 loading || !isFormValid
                   ? "bg-themeLight/80 cursor-auto"
-                  : "bg-themeLight hover:bg-[#652667] cursor-pointer"
+                  : "bg-themeLight hover:bg-[#67264d] cursor-pointer"
               }
             `}
           disabled={loading || !isFormValid}

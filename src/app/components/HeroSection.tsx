@@ -21,7 +21,7 @@ const HeroSection = () => {
                 className="font-medium bg-gradient-to-r"
                 style={{
                   background:
-                    "linear-gradient(90deg, #d24fde 0%, #a021ab 100%)",
+                    "linear-gradient(90deg, #bc478e 0%, #92366e 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
@@ -36,7 +36,7 @@ const HeroSection = () => {
                 className="font-medium bg-gradient-to-r"
                 style={{
                   background:
-                    "linear-gradient(90deg, #d24fde 0%, #a021ab 100%)",
+                    "linear-gradient(90deg, #bc478e 0%, #92366e 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
@@ -51,7 +51,7 @@ const HeroSection = () => {
                 className="font-medium bg-gradient-to-r"
                 style={{
                   background:
-                    "linear-gradient(90deg, #d24fde 0%, #a021ab 100%)",
+                    "linear-gradient(90deg, #bc478e 0%, #92366e 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
